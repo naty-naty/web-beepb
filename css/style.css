@@ -1,0 +1,453 @@
+body{
+    position: relative;
+    font-family: 'Work Sans', sans-serif; 
+    font-size: 16px;
+     color: #A1A4AC;  
+     font-weight: 400;
+     background: #FFF;
+}
+* ,
+ *::before,
+ *::after{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box; 
+ }
+.container{
+    width: 100%;
+    max-width: 1410px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+  /***** header*****/
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    padding: 60px 0;
+    z-index: 9999;
+
+}
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu{
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.menu__list{
+    list-style: none;
+    display: flex;
+
+    }
+.menu__list-item{
+    position: relative;
+    margin: 0  20px;
+    display: flex;
+    align-items: center;
+}
+
+.menu__list-link{
+    position: relative;   /*ეს რომ მივუთით ხაზები 
+    გაუსწორდნენ სიტყვებს*/ 
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+
+
+.menu__list-link::after {   /*ეს არის მენიუს სიტყვების ქვემოთ
+    გასმული ხაზები, რომელიც მაუსის მიტანის დროს გამოდის */ 
+
+    content:'';
+
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    height:2px;
+    width: 0;
+    background: #FFF;
+
+    transition: all.3s ;
+}
+
+.menu__list-link:hover:after {
+    width: 100%;
+}
+
+.menu__list-img{
+    margin-left: 4px;
+    transition: all .3s;
+}
+
+.menu-dropdown{
+    position: absolute;
+
+    top: 120%;
+    left: -10px;
+    right: -10px;
+    padding: 0 10px;
+
+    list-style: none;
+    background: #1e202a;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+}
+
+.menu__list-item:hover .menu-dropdown{
+    top: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu__list-item:hover .menu__list-img{
+    transform: rotate(180deg);
+}
+
+.menu-dropdown__item{
+    margin: 10px 0;
+}
+
+.menu-dropdown__link{
+        position: relative;   
+    
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    
+    
+    .menu-dropdown__link::after {   
+        content:'';
+    
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+    
+        height:2px;
+        width: 0;
+        background: #FFF;
+    
+        transition: all.3s ;
+    }
+    
+    .menu-dropdown__link:hover:after {
+        width: 100%;
+    }
+
+
+
+.header__button{
+margin-left: 20px;
+}
+
+.header__button-link{
+    padding: 10px 30px;
+
+    color: #FFF;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+
+    border-radius: 10px;
+    border: 1px solid  #14B45C;
+    background: #14B45C;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.10);
+
+
+    transition: all .3s;
+
+    }
+
+.header__button-link:hover{      /*ღილაკზე მაუსის მიტანისას წარწერა ფერს 
+    იცვლის გამჭვირვალე ხდება*/
+
+    color: #14B45C; 
+    background: transparent;     
+    }
+
+
+    /****** intro******/
+
+    .intro{
+        position: relative;
+        padding: 190px 0 140px;
+
+
+    }
+    .intro__bg{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .intro__bg-img{
+        max-width: 100%;
+        height: 1095px;
+    }
+
+    .intro__inner{
+        display: flex;
+        
+        z-index:2;
+    }
+
+    .intro__img-item{
+        display: flex;
+        margin:-7px 0 0 56px;
+    
+    }
+
+    
+.intro__content {
+    margin: 208px 0 0 59px;
+    max-width: 495px;
+}
+.intro__content-title {
+    color: #FFF;
+
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 50px; /* 125% */
+}
+.intro__content-text {
+
+    margin: 30px 0 40px;
+    color: #A1A4AC;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px; /* 175% */
+}
+.intro__content-links {
+    display: flex;
+    align-items: center;
+    
+}
+.intro__content-links-download {
+    padding: 16px 30px;
+
+    color: #FFF;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+
+    border-radius: 10px;
+    border: 1px solid  #14B45C;
+    background: #14B45C;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.10);
+
+
+    transition: all .3s;
+}
+
+.intro__content-links-download:hover{      /*ღილაკზე მაუსის მიტანისას წარწერა ფერს 
+    იცვლის გამჭვირვალე ხდება*/
+
+    color: #14B45C; 
+    background: transparent;     
+    }
+.intro__content-links-watch {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+
+    color: #FFF;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+}
+.intro__content-links-watch img{
+    transition: all .3s;
+}
+.intro__content-links-watch:hover img{
+    transform: translateY(-10px); /*ამ შემთხვევაშ სურათი გადაადგილდება y
+    ღერძზე -10px-ით ზემოთ ქვემოთ */
+}
+
+
+/******everneed******/
+
+
+.everneed{
+padding: 190px 0 165px;
+}
+
+.everneed__title {
+    color: #1C1F28;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: normal;
+}
+.everneed__items{   /* სამივე ბლოკი გვერდიგვერდ ჩაეწყობა ჰორიზონტალურად*/
+    display: flex;
+    justify-content: space-between;
+    margin-top: 160px;
+}
+
+.everneed__item{
+    max-width: 320px;
+    text-align: center;
+}
+
+.everneed__item-title {
+    margin: 43px 0 24px;
+    color: #1C1F28;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+}
+.everneed__item-text {
+    color: #A1A4AC;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+
+/******everneed******/
+.features{
+    position: relative;
+    padding: 135px 0 185px;
+
+
+}
+.features__bg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.features__bg-img{
+    max-width: 100;
+    height: auto;
+}
+.features__row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.features__item {
+    margin-top: 80px;
+    padding: 40px 60px 35px 40px;
+    max-width: 420px;
+    background: #FFF;
+    border-radius: 15px;
+}
+.features__item:first-child{
+    margin-top: 84px;
+}
+.features__item-inner{
+    opacity: 0.6;
+    transition: all .3s;
+}
+.features__item-img {
+    width: 60px;
+    height: 60px;
+    background:rgba(161, 164, 172, 0.1);  
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+}
+.features__item-img img{
+    transition: all .3s;
+}
+.features__item-title {
+    margin-bottom: 40px;
+
+    color: #1C1F28;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 28px;
+}
+.features__item-text {
+    color: #7A7C82;
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px; /* 133.333% */
+
+}
+
+.features__item:hover{
+box-shadow:0px 10px 50px rgba(7, 42, 68, 0.04);
+transition: all .3s;
+}
+
+.features__item:hover .features__item-inner{
+    opacity: 1;
+}
+.features__item:hover .features__item-img{
+    background: rgba(20,180,92, 0.1);
+
+}
+.features__item:hover .features__item-img svg{
+    fill:#06EE6E;
+
+} 
+.features__link{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.features__link-item{
+    padding: 16px 46px 17px 45px;
+
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+
+    border-radius: 10px;
+    border: 1px solid  #14B45C;
+    background: #14B45C;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.10);
+
+
+    transition: all .3s;
+}
+
+.features__link-item:hover{      /*ღილაკზე მაუსის მიტანისას წარწერა ფერს 
+    იცვლის გამჭვირვალე ხდება*/
+
+    color: #14B45C; 
+    background: transparent;     
+    }
